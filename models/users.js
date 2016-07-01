@@ -8,10 +8,6 @@ var userSchema = new mongoose.Schema({
         unique:true,
         required:true,
     },
-    name:{
-        type:String,
-        required:true,
-    },
     hash:String,
     salt:String,
 });
