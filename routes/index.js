@@ -10,7 +10,7 @@ var ctrlAccount = require('../controllers/account');
 var ctrlAuth = require('../controllers/auth');
 
 // Account
-router.get('/profile', auth, ctrlAccount.readAccount);
+router.get('/mutantlist', auth, ctrlAccount.readAccount);
 
 // Auth
 router.post('/register', ctrlAuth.register);
