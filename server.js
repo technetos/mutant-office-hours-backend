@@ -6,10 +6,10 @@ var bodyParser = require('body-parser');
 
 var passport = require('passport');
 
-require('./mutant-office-hours-backend/models/db');
-require('./mutant-office-hours-backend/config/passport');
+require('./models/db');
+require('./config/passport');
 
-var routesApi = require('./mutant-office-hours-backend/routes/auth');
+var routesApi = require('./routes/index');
 
 var server = express();
 

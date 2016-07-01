@@ -5,7 +5,7 @@ server.set('port', 3000);
 
 var httpd = http.createServer(server);
 
-httpd.listen(port);
+httpd.listen(3000);
 
 function onError(error) {
     if(error.syscall !== 'listen') {
@@ -25,7 +25,7 @@ function onError(error) {
 httpd.on('error', onError);
 
 function onListening() {
-    var addr = server.address();
+    var addr = httpd.address();
     console.log('listening on port 3000');
 }
 

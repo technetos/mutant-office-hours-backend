@@ -4,7 +4,7 @@ var DBURL = process.env.MONGOURL;
 mongoose.connect(DBURL);
 
 mongoose.connection.on('connected', function() {
-    console.log('Mongoose connected to + ' DBURL);
+    console.log('Mongoose connected to ' + DBURL);
 });
 
 mongoose.connection.on('error', function(err) {
@@ -23,7 +23,7 @@ var die = function(msg, callback) {
 };
 
 process.on('SIGINT', function() {
-    die('server termination'. function() {
+    die('server termination', function() {
         process.exit(0);
     });
 });
