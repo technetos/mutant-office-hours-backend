@@ -23,8 +23,8 @@ server.use(bodyParser.urlencoded({
 
 server.use(cookieParser());
 
-// Setup ../mutant-office-hours-frontend directory to serve static resources from
-server.use(express.static(path.join(__dirname, '../mutant-office-hours-frontend')));
+// Setup ../mutant-office-hours directory to serve static resources from
+server.use(express.static(path.join(__dirname, '../mutant-office-hours')));
 
 // Initialize passport before the route middleware
 server.use(passport.initialize());
@@ -34,7 +34,7 @@ server.use('/api', routesApi);
 
 // Serve the app
 server.use(function(req, res) {
-    res.sendFile(path.join(__dirname, '../mutant-office-hours-frontend', 'index.html'));
+    res.sendFile(path.join(__dirname, '../mutant-office-hours', 'index.html'));
 });
 
 // Catch 404 and forward to error handler
