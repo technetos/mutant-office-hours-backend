@@ -8,6 +8,7 @@ var userSchema = new mongoose.Schema({
         unique: true,
         required: true
     },
+    mutants: [],
     hash: String,
     salt: String
 });

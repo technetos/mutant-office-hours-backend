@@ -11,6 +11,7 @@ module.exports.readAccount = function(req, res) {
             .findById(req.payload._id)
             .exec(function(err, user) {
                 res.status(200).json(user);
+                console.log(res.status(200).json(user));
             });
     }
 };
