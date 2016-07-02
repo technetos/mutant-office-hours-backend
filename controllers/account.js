@@ -10,8 +10,8 @@ module.exports.readAccount = function(req, res) {
         User
             .findById(req.payload._id)
             .exec(function(err, user) {
-                res.status(200).json(user);
-                console.log(res.status(200).json(user));
+                res.status(200)
+                res.json(user.mutants);
             });
     }
 };

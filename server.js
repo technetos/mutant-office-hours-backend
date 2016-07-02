@@ -30,7 +30,7 @@ server.use(express.static(path.join(__dirname, '../mutant-office-hours')));
 server.use(passport.initialize());
 
 // Setup /api route
-server.use('/api', routesApi);
+server.use('/', routesApi);
 
 // Serve the app
 server.use(function(req, res) {
