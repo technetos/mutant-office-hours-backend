@@ -1,22 +1,22 @@
-var mongoose = require('mongoose');
-var DBURL = process.env.MONGOURL;
+var db = require('mongoose');
 
-mongoose.connect(DBURL);
+//db.connect(process.env.MONGOURL);
+db.connect("mongodb://127.0.0.1");
 
-mongoose.connection.on('connected', function() {
-    console.log('Mongoose connected to ' + DBURL);
+db.connection.on('connected', function() {
+    console.log('Mongoose connected');
 });
 
-mongoose.connection.on('error', function(err) {
+db.connection.on('error', function(err) {
     console.log('Mongoose connection error ' + err);
 });
 
-mongoose.connection.on('disconnected', function() {
+db.connection.on('disconnected', function() {
     console.log('Mongoose disconnected');
 });
 
 var die = function(msg, callback) {
-    mongoose.connection.close(function() {
+    db.connection.close(function() {
         console.log('Mongoose disconnected through ' + msg);
         callback();
     });
@@ -27,3 +27,5 @@ process.on('SIGINT', function() {
         process.exit(0);
     });
 });
+
+module.exports = db;

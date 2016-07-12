@@ -18,6 +18,6 @@ server.use('/api/v1/users', userRoute);
 server.use('/api/v1/session', sessionRoute);
 
 
-app.listen(3030, function() {
+server.listen(3030, function() {
   console.log('listening on 127.0.0.1:3030');
 });
