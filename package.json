@@ -1,20 +1,15 @@
 {
-  "name": "mutant-office-hours-backend-authentication",
+  "name": "mutant-office-hours-backend",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "start": "node start.js"
   },
   "dependencies": {
+    "bcryptjs": "^2.3.0",
     "body-parser": "^1.15.2",
-    "cookie-parser": "^1.4.3",
     "express": "^4.14.0",
-    "express-jwt": "^3.4.0",
-    "jsonwebtoken": "^7.0.1",
-    "mongoose": "^4.5.2",
-    "morgan": "^1.7.0",
-    "passport": "^0.3.2",
-    "passport-local": "^1.0.0",
-    "serve-favicon": "^2.3.0"
+    "jsonwebtoken": "^7.1.3",
+    "mongoose": "^4.5.4"
   }
 }
